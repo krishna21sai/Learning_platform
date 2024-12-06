@@ -1,0 +1,69 @@
+/* Container for the whole page */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style for the add topic button */
+.add-topic-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #61dafb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-topic-btn:hover {
+    background-color: #21a1f1;
+}
+
+/* Style for the dynamic input container */
+.topics-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Style for individual topic input */
+.topic-input {
+    margin-bottom: 15px;
+}
+
+/* Style for each input field */
+.input-field {
+    padding: 10px;
+    font-size: 14px;
+    width: 250px;
+    margin-right: 10px;
+}
+
+.remove-btn {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-btn:hover {
+    background-color: darkred;
+}
+
+/* Style for the submit button */
+.submit-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #61dafb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background-color: #21a1f1;
+}
