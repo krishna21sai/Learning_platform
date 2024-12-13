@@ -1,35 +1,32 @@
 // Function to add new topic input fields dynamically
 function addTopicFields() {
-    // Create a new div to hold the topic and content input fields
     const topicDiv = document.createElement('div');
-    topicDiv.classList.add('topic-input');
+    topicDiv.classList.add('topic-row'); // Styled row for better structure
 
-    // Create the input for the topic
     const topicInput = document.createElement('input');
     topicInput.type = 'text';
-    topicInput.name = 'topics[]'; // Name for the topics array
-    topicInput.classList.add('input-field');
+    topicInput.name = 'topics';
+    topicInput.classList.add('input-field', 'topic-input');
     topicInput.placeholder = 'Enter Topic';
 
-    // Create the input for the content
     const contentInput = document.createElement('textarea');
-    contentInput.name = 'contents[]'; // Name for the contents array
-    contentInput.classList.add('input-field');
+    contentInput.name = 'contents';
+    contentInput.classList.add('input-field', 'content-input');
     contentInput.placeholder = 'Enter Content';
 
-    // Create the remove button
     const removeBtn = document.createElement('button');
+    removeBtn.type = 'button';
     removeBtn.classList.add('remove-btn');
     removeBtn.textContent = 'Remove';
-    removeBtn.onclick = function() {
-        topicDiv.remove(); // Remove the topic input div
+    removeBtn.onclick = function () {
+        topicDiv.remove();
     };
 
-    // Append the inputs and remove button to the topic div
+
+    // Arrange the elements for a better structure
     topicDiv.appendChild(topicInput);
     topicDiv.appendChild(contentInput);
     topicDiv.appendChild(removeBtn);
 
-    // Append the topic div to the topics container
     document.getElementById('topics-container').appendChild(topicDiv);
 }

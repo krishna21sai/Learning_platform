@@ -7,25 +7,23 @@
     <link rel="stylesheet" href="/addcourse.css"> <!-- Linking the CSS file -->
 </head>
 <body>
+
     <%- include('nav') %>
     <div class="container">
         <h1>Add Topics and Content</h1>
-        
-        <!-- Button to add new topic fields -->
-        <button class="add-topic-btn" onclick="addTopicFields()">Add Topic</button>
-
-        <!-- Container to hold dynamically added topics -->
         <form id="topics-form" method="POST">
+        <h1>Course Name:   <input type="text" id="className" name="className"></h1>
             <div id="topics-container" class="topics-container">
-                <!-- Dynamic topics will be added here -->
             </div>
-
-            <!-- Submit Button for the form -->
             <button type="submit" class="submit-btn">Submit Topics</button>
         </form>
+        <div>
+            <br>
+        <button class="add-topic-btn" onclick="addTopicFields()">Add Topic</button>
+        </div>
+
     </div>
 
-    <!-- JavaScript -->
     <script src="/addcourse.js"></script>
 </body>
 </html>

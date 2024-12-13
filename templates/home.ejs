@@ -31,21 +31,27 @@
         </ul>
     </div>
 
-    <!-- Content -->
     <h1>Welcome</h1>
-    <% users.forEach((user) => { %>
-        <h2>Username: <%= user.name %></h2>
-    <% }) %>
+    <div class="courses-container">
+        <% users.forEach((user) => { %>
+            <div class="course-card">
+                <a href="/courseDetails/<%= user.courseName%>">
+                    <img src="/course.png" alt="Course Image" class="course-img">
+                </a>
+                <div class="course-info">
+                    <h2 class="course-title"><%= user.courseName %></h2>
+                    <p class="course-description">Short description about the course or its topics.</p>
+                </div>
+            </div>
+        <% }) %>
+    </div>
 
-    <!-- Include JavaScript to handle profile menu toggle -->
     <script>
-        // Function to toggle the visibility of the profile menu
         function toggleProfileMenu() {
             const menu = document.getElementById('profile-menu');
             menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
         }
 
-        // Close the profile menu if the user clicks outside of it
         window.addEventListener('click', function(event) {
             const menu = document.getElementById('profile-menu');
             const profileContainer = document.querySelector('.profile-container');
